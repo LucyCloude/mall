@@ -26,8 +26,10 @@ public class AdminUserDetails implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
        //获取用户的权限
         return   umsPermissions.stream()
-                .filter(umsPermission -> umsPermission.getValue() != null)//拦截掉权限为空的对象
-                .map(umsPermission -> new SimpleGrantedAuthority(umsPermission.getValue()))//权限归纳到SimpleGranteAuthority对象中
+                //拦截掉权限为空的对象
+                .filter(umsPermission -> umsPermission.getValue() != null)
+                //权限归纳到SimpleGranteAuthority对象中
+                .map(umsPermission -> new SimpleGrantedAuthority(umsPermission.getValue()))
                 .collect(Collectors.toList());
     }
 

@@ -1,5 +1,7 @@
 package com.macro.mall.service.impl;
 
+
+import com.alibaba.druid.util.StringUtils;
 import com.github.pagehelper.PageHelper;
 import com.macro.mall.dao.PmsProductResultDao;
 import com.macro.mall.mapper.*;
@@ -8,12 +10,10 @@ import com.macro.mall.query.PmsProductParam;
 import com.macro.mall.query.PmsProductQueryParam;
 import com.macro.mall.query.PmsProductResult;
 import com.macro.mall.service.PmsProductService;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
@@ -80,7 +80,7 @@ public class PmsProductServiceImpl implements PmsProductService {
 
 
     //设置关联并且保存关联对象
-    private  <M,T> void insertAssociated(M mapper,List<T> list,Long productId){
+    private  <M,T> void insertAssociated(M mapper, List<T> list, Long productId){
         try{
             if (CollectionUtils.isEmpty(list)) return;//判断list是否为null 如果没有元素存储一样 返回true
             for (T entity:list) {
@@ -99,7 +99,7 @@ public class PmsProductServiceImpl implements PmsProductService {
 
     }
     //生成sku编码
-    private void skuStrockCoke(List<PmsSkuStock> list,Long productId){
+    private void skuStrockCoke(List<PmsSkuStock> list, Long productId){
         if(CollectionUtils.isEmpty(list)) return;
         for (int i=0;i<list.size();i++){
             if (StringUtils.isEmpty(list.get(i).getSkuCode())){

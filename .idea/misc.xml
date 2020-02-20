@@ -17,5 +17,5 @@
   <component name="ProjectResources">
     <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="$USER_HOME$/Desktop/五年模拟三年架构/框架/ORM框架/MyBatis/MyBatisJAR包/mybatis_jb51/mybatis-3.4.6/mybatis-3-config.dtd" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
