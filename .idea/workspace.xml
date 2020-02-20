@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="152">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -45,6 +45,12 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
     <option name="runMavenInBackground" value="false" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectId" id="1Y4U3bce2YPUfeBZamVmqLxdjW3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -286,7 +292,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.22749591" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.27659574" />
       <window_info anchor="bottom" id="MyBatis Log" order="13" />
       <window_info anchor="bottom" id="JRebel Executor" order="14" />
       <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
@@ -341,7 +347,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交完成商品模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次提交完成商品模块" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -351,8 +358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="152">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
         </state>
       </provider>
     </entry>
