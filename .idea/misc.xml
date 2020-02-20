@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/mall-admin" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mall-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-model/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="$USER_HOME$/Desktop/五年模拟三年架构/框架/ORM框架/MyBatis/MyBatisJAR包/mybatis_jb51/mybatis-3.4.6/mybatis-3-config.dtd" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--商品分类表的级别所在的信息都在同一张表中-->
+<mapper namespace="com.macro.mall.dao.PmsProductCategoryDao">
+    <!--PmsProductCategoryWithChildrenItem类继承了PmsProductCategory实体类,
+        所以resultMap标签需要继承PmsProductCategory实体类的mapper映射文件中的resultMap,
+        PmsProductCategoryWithChildrenItem类有个list集合类型为PmsProductCategory实体类 所以collection标签,
+        columnPrefix=child_  以child_开头的字段封装到list中的PmsProductCategory实体类中
+   -->
+    <resultMap id="listWithChildrenMap" type="com.macro.mall.domain.PmsProductCategoryWithChildrenItem"
+        extends="com.macro.mall.mapper.PmsProductCategoryMapper.BaseResultMap">
+        <!--下级商品信息-->
+        <collection property="children" ofType="com.macro.mall.model.PmsProductCategory"
+                    resultMap="com.macro.mall.mapper.PmsProductCategoryMapper.BaseResultMap"
+                    columnPrefix="child_"/>
+    </resultMap>
+    <!--查询商品分类-->
+    <select id="listWithChildren" resultMap="listWithChildrenMap">
+        select
+            c1.id,
+            c1.name,
+            c2.id as child_id,
+            c2.name as child_name
+        from pms_product_category c1
+             left join pms_product_category c2
+             on c1.id=c2.parent_id
+        where c1.parent_id=0
+    </select>
+</mapper>
