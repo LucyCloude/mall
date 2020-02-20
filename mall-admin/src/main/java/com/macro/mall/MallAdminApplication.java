@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @SpringBootApplication
 public class MallAdminApplication {
     public static void main(String[] args) {
-        //////////////////////////ssssss/dfwfwfwfwedgaegreafgsrt
+        //////红红火火恍
         SpringApplication.run(MallAdminApplication.class, args);
     }
 }
