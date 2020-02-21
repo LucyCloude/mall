@@ -37,6 +37,7 @@ public class PmsProductAttributeServiceImpl implements PmsProductAttributeServic
     private PmsProductAttributeDao pmsProductAttributeDao;
 
     @Override//根据id查询商品属性
+    @Transactional(readOnly = true)
     public PmsProductAttribute getProAttri(Long id) {
         return pmsProductAttributeMapper.selectByPrimaryKey(id);
     }
@@ -65,7 +66,7 @@ public class PmsProductAttributeServiceImpl implements PmsProductAttributeServic
         return pmsProductAttributeMapper.updateByPrimaryKeySelective(pmsProductAttribute);
     }
 
-    @Override
+    @Override//删除商品属性
     public Integer delete(List<Long> ids) {
         if (CollectionUtils.isEmpty(ids)){
             return 0;
@@ -86,13 +87,13 @@ public class PmsProductAttributeServiceImpl implements PmsProductAttributeServic
         return pmsProductAttributeCategoryMapper.updateByPrimaryKey(pmsProductAttributeCategory);
     }
 
-    @Override
+    @Override//查询出所有的商品属性
     @Transactional(readOnly = true)//cid属性分类的id  tyep 0:规格 1:参数
     public List<PmsProductAttribute> getList(Long cid, Integer type, Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         PmsProductAttributeExample pmsProductAttributeExample = new PmsProductAttributeExample();
         pmsProductAttributeExample.createCriteria().andProductAttributeCategoryIdEqualTo(cid).andTypeEqualTo(type);
-        return pmsProductAttributeMapper.selectByExample(pmsProductAttributeExample);
+        return  pmsProductAttributeMapper.selectByExample(pmsProductAttributeExample);
     }
 
     @Override//据商品分类的id查询出商品属性分类和商品属性的id

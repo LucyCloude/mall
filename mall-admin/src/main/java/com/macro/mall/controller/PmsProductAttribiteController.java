@@ -5,6 +5,7 @@ import com.macro.mall.common.CommonResult;
 import com.macro.mall.model.PmsProductAttribute;
 import com.macro.mall.query.PmsProductAttributeParam;
 import com.macro.mall.service.PmsProductAttributeService;
+import com.macro.mall.service.impl.PmsProductAttributeServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,9 +80,9 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("根据商品分类的id查询出商品属性分类和商品属性")
     @GetMapping("/attrInfo/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     public CommonResult<List<Map<String,Long>>> getAttriIdAndCateId(@PathVariable Long id){
+        System.out.println(pmsProductAttributeService+" ----");
         List<Map<String, Long>> attriInfo = pmsProductAttributeService.getAttriIdAndCateId(id);
         return CommonResult.success(attriInfo);
     }

@@ -61,6 +61,7 @@ public class PmsProductController {
     public CommonResult<CommonPage<PmsProduct>> getList(PmsProductQueryParam pmsProductQueryParam,
                                 @RequestParam("pageNum") Integer pageNum,
                                 @RequestParam("pageSize") Integer pageSize){
+        System.out.println(pmsProductService.getClass()+"------");
         List<PmsProduct> list = pmsProductService.list(pmsProductQueryParam, pageNum, pageSize);
         return CommonResult.success(CommonPage.restPage(list));
     }
