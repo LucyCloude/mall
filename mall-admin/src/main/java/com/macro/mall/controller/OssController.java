@@ -9,15 +9,12 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Api(tags = "OSSController",description = "OSS管理")
-@Controller
+@RestController
 @RequestMapping("/aliyun/oss")
 public class OssController {
 
@@ -26,7 +23,6 @@ public class OssController {
 
     @ApiOperation("OSS上传生成签名")
     @GetMapping("/policy")
-    @ResponseBody
     public CommonResult<OssPolicyResult> policy(){
         OssPolicyResult policy = ossService.policy();
         return CommonResult.success(policy);
@@ -34,7 +30,6 @@ public class OssController {
 
     @ApiModelProperty("oss文件上传成功或回调")
     @PostMapping("/callback")
-    @ResponseBody
     public CommonResult<OssCallbackResult> callback(HttpServletRequest request){
         OssCallbackResult callback = ossService.callback(request);
         return CommonResult.success(callback);

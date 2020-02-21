@@ -10,11 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @Api(tags = "cmsSubjectController",description = "商品专题管理")
-@Controller
+@RestController
 @RequestMapping("/subject")
 public class CmsSubjectController {
 
@@ -23,7 +24,6 @@ public class CmsSubjectController {
 
     @ApiOperation("查询全部商品专题")
     @RequestMapping("/listAll")
-    @ResponseBody
     public CommonResult<List<CmsSubject>> getList(){
         List<CmsSubject> list = cmsSubjectService.getList();
         return CommonResult.success(list);

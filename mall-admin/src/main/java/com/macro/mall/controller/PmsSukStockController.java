@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Api(tags = "pmsSukStockController",description = "商品SKU管理")
-@Controller
+@RestController
 @RequestMapping("/sku")
 public class PmsSukStockController {
 
@@ -24,7 +24,6 @@ public class PmsSukStockController {
 
     @ApiOperation("根据商品的id 和 sku编码模糊查询出对应sku")
     @GetMapping("/{pid}")
-    @ResponseBody
     public CommonResult<List<PmsSkuStock>> getList(@PathVariable("pid") Long id,
                                                    @RequestParam(value = "keyword",required = false) String keyword){
         List<PmsSkuStock> pmsSkuStorckAll = pmsSkuStockService.getPmsSkuStorckAll(id, keyword);

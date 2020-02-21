@@ -15,8 +15,8 @@ import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 
-@Controller
 @Api(tags = "UmsAdminController", description = "后台用户管理")
+@RestController
 @RequestMapping("/admin")
 public class UmsAdminController {
 
@@ -29,13 +29,8 @@ public class UmsAdminController {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
-    /**
-     * 用户登录
-     * @param umsAdmin
-     * @return
-     */
+    @ApiOperation("用户登录")
     @PostMapping("/login")
-    @ResponseBody
     public CommonResult login(@RequestBody UmsAdmin umsAdmin){
         String token = umsAdminService.login(umsAdmin.getUsername(), umsAdmin.getPassword());
         if (token==null){
@@ -50,7 +45,6 @@ public class UmsAdminController {
 
     @ApiOperation(value = "获取当前登录用户信息")
     @PostMapping(value = "/info")
-    @ResponseBody
     public CommonResult getAdminInfo(Principal principal) {
         //根据用户名查询出用户信息
         UmsAdmin umsAdmin = umsAdminService.getAdminByUsername(principal.getName());

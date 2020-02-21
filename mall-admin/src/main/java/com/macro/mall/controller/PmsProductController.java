@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Api(tags = "pmsProductController",description = "商品管理")
-@Controller
+@RestController
 @RequestMapping("/product")
 public class PmsProductController {
     @Autowired
@@ -25,7 +25,6 @@ public class PmsProductController {
 
     @ApiOperation("保存商品")
     @RequestMapping("/create")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:create')")
     public CommonResult create(@RequestBody PmsProductParam productParam){
         Integer success = pmsProductService.create(productParam);
@@ -37,7 +36,6 @@ public class PmsProductController {
 
     @ApiOperation("根据商品的id查询商品修改商品")
     @GetMapping("/updateInfo/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:read')")
     public  CommonResult<PmsProductResult> getUpdateInfo(@PathVariable Long id){
         PmsProductResult updateInfo = pmsProductService.getUpdateInfo(id);
@@ -46,7 +44,6 @@ public class PmsProductController {
 
     @ApiOperation("更新商品")
     @PostMapping("/update/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:update')")
     public CommonResult update(@PathVariable Long id,@RequestBody PmsProductParam pmsProductParam){
         Integer count = pmsProductService.update(id, pmsProductParam);
@@ -60,7 +57,6 @@ public class PmsProductController {
 
     @ApiOperation("分页查询商品")
     @GetMapping("/list")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:read')")
     public CommonResult<CommonPage<PmsProduct>> getList(PmsProductQueryParam pmsProductQueryParam,
                                 @RequestParam("pageNum") Integer pageNum,
@@ -71,7 +67,6 @@ public class PmsProductController {
 
     @ApiOperation("批量修改商品的上下架")
     @PostMapping("/update/publishStatus")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:update')")
     public  CommonResult updatePublishStatus(@RequestParam("ids") List<Long> ids,
                                              @RequestParam("publishStatus") Integer publishStatus){
@@ -84,7 +79,6 @@ public class PmsProductController {
 
     @ApiOperation("批量修改商品的推荐")
     @PostMapping("/update/recommendStatus")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:update')")
     public CommonResult updateRecommandStatus(@RequestParam("ids") List<Long> ids,
                                               @RequestParam("recommendStatus")Integer recommendStatus){
@@ -98,7 +92,6 @@ public class PmsProductController {
 
     @ApiOperation("批量修改商品的新品")
     @PostMapping("/update/newStatus")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:product:update')")
     public  CommonResult updateNewStatus(@RequestParam("ids") List<Long> ids,
                                          @RequestParam("newStatus") Integer newStatus){

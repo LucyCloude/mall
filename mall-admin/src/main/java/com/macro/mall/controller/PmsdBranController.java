@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @Api(tags = "pmsdBranController",description = "商品品牌管理")
-@Controller
+@RestController
 @RequestMapping("/brand")
 public class PmsdBranController {
     @Autowired
@@ -24,7 +24,6 @@ public class PmsdBranController {
 
     @ApiOperation("查询所有商品品牌")
     @GetMapping("/listAll")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult<List<PmsBrand>> listAll(){
         return CommonResult.success(pmsBrandService.listAllBrand());
@@ -32,7 +31,6 @@ public class PmsdBranController {
 
     @ApiOperation("分页查询商品品牌")
     @GetMapping("/list")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult<CommonPage<PmsBrand>> getList(@RequestParam(value = "keyword",required = false)String keyword,
                                 @RequestParam(value = "pageNum",defaultValue ="1")Integer pageNum,
@@ -43,7 +41,6 @@ public class PmsdBranController {
 
     @ApiOperation("添加商品品牌")
     @PostMapping("/create")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:create')")
     public  CommonResult create(@RequestBody PmsBrandParam pmsBrand){
         Integer count = pmsBrandService.create(pmsBrand);
@@ -55,7 +52,6 @@ public class PmsdBranController {
 
     @ApiOperation("查询单个商品品牌")
     @GetMapping("/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:read')")
     public  CommonResult<PmsBrand> getPmsBrand(@PathVariable Long id){
         return CommonResult.success(pmsBrandService.getPmsBrand(id));
@@ -63,7 +59,6 @@ public class PmsdBranController {
 
     @ApiOperation(value = "更新品牌")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:update')")
     public CommonResult update(@PathVariable("id") Long id,
                                @RequestBody PmsBrandParam pmsBrandParam){
@@ -76,7 +71,6 @@ public class PmsdBranController {
 
     @ApiOperation("删除商品品牌")
     @GetMapping("/delete/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:delete')")
     public CommonResult delete(@PathVariable Long id){
         Integer count = pmsBrandService.delete(id);
@@ -90,7 +84,6 @@ public class PmsdBranController {
 
     @ApiOperation("批量修改商品品牌制造商")
     @PostMapping("/update/factoryStatus")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:update')")
     public CommonResult updateFactoryStatus(@RequestParam("ids") List<Long> ids,
                                             @RequestParam("factoryStatus") Integer factoryStatus){
@@ -102,7 +95,6 @@ public class PmsdBranController {
     }
     @ApiOperation("批量修改商品品牌显示")
     @PostMapping("/update/showStatus")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:brand:update')")
     public CommonResult updateShowStatus(@RequestParam("ids") List<Long> ids,
                                          @RequestParam("showStatus") Integer showStatus){

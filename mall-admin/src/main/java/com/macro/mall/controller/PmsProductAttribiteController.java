@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @Api(tags = "pmsProductAttribiteController",description = "商品属性管理")
-@Controller
+@RestController
 @RequestMapping("/productAttribute")
 public class PmsProductAttribiteController {
 
@@ -26,7 +26,6 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("根据id查询指定商品属性")
     @GetMapping("{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     public CommonResult<PmsProductAttribute> getProAttri(@PathVariable Long id){
         return CommonResult.success(pmsProductAttributeService.getProAttri(id));
@@ -34,7 +33,6 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("保存商品属性")
     @PostMapping("/create")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:create')")
     public  CommonResult create(@RequestBody PmsProductAttributeParam pmsProductAttributeParam){
         Integer count = pmsProductAttributeService.create(pmsProductAttributeParam);
@@ -47,7 +45,6 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("修改商品属性")
     @PostMapping("/update/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:update')")
     public  CommonResult update(@PathVariable Long id,
                                 @RequestBody PmsProductAttributeParam pmsProductAttributeParam){
@@ -60,7 +57,6 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("删除商品属性")
     @PostMapping("/delete")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:delete')")
     public  CommonResult delete(@RequestParam("ids") List<Long> ids){
         Integer count = pmsProductAttributeService.delete(ids);
@@ -72,7 +68,6 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("根据商品属性分类的id查询 属性列表 或 参数列表 type 0:代表规格  1:参数")
     @GetMapping("/list/{cid}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     private CommonResult<CommonPage<PmsProductAttribute>> getList(@PathVariable Long cid,
                                                                   @RequestParam("type") Integer type,

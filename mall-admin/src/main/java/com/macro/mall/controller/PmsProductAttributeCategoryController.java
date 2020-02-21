@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Api(tags = "pmsProductAttributeCategoryController",description = "商品属性分类管理")
-@Controller
+@RestController
 @RequestMapping("/productAttribute/category")
 public class PmsProductAttributeCategoryController {
 
@@ -25,7 +25,6 @@ public class PmsProductAttributeCategoryController {
 
     @ApiOperation("保存商品属性分类")
     @PostMapping("/create")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:create')")
     public CommonResult create(@RequestParam String name){
         Integer count = pmsProductAttributeCategoryService.create(name);
@@ -37,7 +36,6 @@ public class PmsProductAttributeCategoryController {
 
     @ApiOperation("分页查询出所有 商品属性分类")
     @GetMapping("/list")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     public CommonResult<CommonPage<PmsProductAttributeCategory>> getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                                                                          @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize){
@@ -48,7 +46,6 @@ public class PmsProductAttributeCategoryController {
 
     @ApiOperation("修改商品属性分类的名称")
     @PostMapping("/update/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:update')")
     public CommonResult update(@PathVariable Long id,@RequestParam String name){
         Integer count = pmsProductAttributeCategoryService.update(id, name);
@@ -60,7 +57,6 @@ public class PmsProductAttributeCategoryController {
 
     @ApiOperation("删除商品属性分类")
     @RequestMapping("/delete/{id}")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:delete')")
     public  CommonResult delete(@PathVariable Long id){
         Integer count = pmsProductAttributeCategoryService.delete(id);
@@ -73,7 +69,6 @@ public class PmsProductAttributeCategoryController {
 
     @ApiOperation("商品分类页面  查询商品属性分类及商品属性")
     @GetMapping("/list/withAttr")
-    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     public CommonResult<List<PmsProductAttributeCategoryItem>> getAttriItem(){
 
