@@ -69,8 +69,9 @@ public class PmsProductAttribiteController {
 
     @ApiOperation("根据商品属性分类的id查询 属性列表 或 参数列表 type 0:代表规格  1:参数")
     @GetMapping("/list/{cid}")
+    @ResponseBody
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
-    private CommonResult<CommonPage<PmsProductAttribute>> getList(@PathVariable Long cid,
+    public CommonResult<CommonPage<PmsProductAttribute>> getList(@PathVariable Long cid,
                                                                   @RequestParam("type") Integer type,
                                                                   @RequestParam(value = "pageNum",defaultValue ="1") Integer pageNum,
                                                                   @RequestParam(value = "pageSize",defaultValue = "5") Integer pageSize){
@@ -82,7 +83,6 @@ public class PmsProductAttribiteController {
     @GetMapping("/attrInfo/{id}")
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     public CommonResult<List<Map<String,Long>>> getAttriIdAndCateId(@PathVariable Long id){
-        System.out.println(pmsProductAttributeService+" ----");
         List<Map<String, Long>> attriInfo = pmsProductAttributeService.getAttriIdAndCateId(id);
         return CommonResult.success(attriInfo);
     }
