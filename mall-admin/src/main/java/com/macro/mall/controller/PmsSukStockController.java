@@ -29,4 +29,11 @@ public class PmsSukStockController {
         List<PmsSkuStock> pmsSkuStorckAll = pmsSkuStockService.getPmsSkuStorckAll(id, keyword);
         return CommonResult.success(pmsSkuStorckAll);
     }
+
+    @ApiOperation("根据商品的id 和 sku编码模糊查询出对应sku")
+    @PostMapping("/update/{pid}")
+    public CommonResult update(@PathVariable Long pid,@RequestBody List<PmsSkuStock> skuStockList){
+        Integer count = pmsSkuStockService.update(pid, skuStockList);
+        return count>0?CommonResult.success(count):CommonResult.failed();
+    }
 }

@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.macro.mall.dao.PmsProductAttributeDao">
+    <!--根据商品分类的id查询出商品属性分类和商品属性的id-->
     <select id="getAttriIdAndCateId" resultType="map">
         SELECT pa.id attributeId,pac.id attributeCategoryId
             FROM pms_product_category_attribute_relation pcar
