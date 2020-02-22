@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dade69e-928e-4e91-93a5-5f3c20c4951a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/PmsSkuStockDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsSkuStockDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/component/BindingResultAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/OmsOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OmsOrderQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/OmsOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/OmsOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/OmsOrderDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mall_admin_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/mall_admin_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_logstash_logback_logstash_logback_encoder_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsSukStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsSukStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsSkuStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsSkuStockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsSkuStockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsSkuStockServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsProductAttributeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsProductAttributeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsBrandParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsBrandParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductCategoryParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductCategoryParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/mall-admin/target/" />
     <ignored path="$PROJECT_DIR$/mall-model/target/" />
@@ -20,73 +31,80 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsSkuStockService.java">
+        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/OmsOrderDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+            <state relative-caret-position="184">
+              <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsSkuStockServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/OmsOrderDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="345">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java">
+        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OmsOrderQueryParam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductService.java">
+        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/OmsOrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="296">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1087">
-              <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+            <state relative-caret-position="135">
+              <caret line="31" column="125" selection-start-line="31" selection-start-column="125" selection-end-line="31" selection-end-column="125" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsSukStockController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsProductCategoryDao.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsProductResultDao.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -94,6 +112,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Interface" />
         <option value="xxxMapepr" />
       </list>
@@ -108,21 +127,33 @@
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/CmsPrefrenceAreaController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/CmsSubjectController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OssController.java" />
-        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductAttributeCategoryController.java" />
-        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductCategoryController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/UmsAdminController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/UmsMemberLevelController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductAttributeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductAttribiteController.java" />
-        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/PmsSkuStockDao.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsProductAttributeDao.xml" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/PmsSkuStockDao.xml" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsSukStockController.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsSkuStockService.java" />
         <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsSkuStockServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductService.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java" />
+        <option value="$PROJECT_DIR$/mall-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductCategoryController.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/component/BindingResultAspect.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductCategoryParam.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsBrandParam.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/OmsOrderService.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/OmsOrderDao.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/OmsOrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OmsOrderQueryParam.java" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/OmsOrderDao.xml" />
+        <option value="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderController.java" />
       </list>
     </option>
   </component>
@@ -225,6 +256,103 @@
               <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,7 +421,7 @@
               <item name="mall-model" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mall" type="b2602c69:ProjectViewProjectNode" />
@@ -301,7 +429,7 @@
               <item name="mall-model" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -310,19 +438,19 @@
               <item name="mall-model" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="macro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="macro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="macro" type="462c0819:PsiDirectoryNode" />
               <item name="mall" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -331,7 +459,7 @@
               <item name="mall-model" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="macro" type="462c0819:PsiDirectoryNode" />
               <item name="mall" type="462c0819:PsiDirectoryNode" />
@@ -489,8 +617,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21482602" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22844176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -501,7 +630,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.049099836" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28641573" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,7 +652,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" />
@@ -572,81 +701,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改@Controller改成@RestController" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/CmsSubjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OssController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductAttributeCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/UmsAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/UmsMemberLevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/CmsPrefrenceAreaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductAttributeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductAttributeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -674,34 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="e#444#445#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/PmsProductAttributeCategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall-model/src/main/resources/com/macro/mall/mapper/PmsSkuStockMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="116" column="27" lean-forward="true" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/PmsProductAttributeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -753,20 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsSukStockController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -800,10 +816,274 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/MallAdminApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductCategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductCategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/PmsProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="142" column="24" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductAttributeCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/common/CommonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/common/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/component/BindingResultAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/CmsPrefrenceAreaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/CmsSubjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OssController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsProductCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OssCallbackResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OssPolicyResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsBrandParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductCategoryParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductQueryParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/PmsProductAttributeParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.13/swagger-annotations-1.5.13.jar!/io/swagger/annotations/Api.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/OmsOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/PmsProductAttributeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/PmsProductAttributeCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/OmsOrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/PmsProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1087">
-          <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        <state relative-caret-position="119">
+          <caret line="124" column="67" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/dao/OmsOrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OmsOrderQueryParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/resources/com/macro/mall/mapper/OmsOrderDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="31" column="125" selection-start-line="31" selection-start-column="125" selection-end-line="31" selection-end-column="125" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

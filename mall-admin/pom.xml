@@ -136,11 +136,11 @@
             <version>${aliyun-oss.version}</version>
         </dependency>
         <!--集成logstash-->
-        <dependency>
+<!--        <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>${logstash-logback.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

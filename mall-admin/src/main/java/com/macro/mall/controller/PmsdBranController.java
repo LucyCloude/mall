@@ -10,6 +10,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,7 +44,8 @@ public class PmsdBranController {
     @ApiOperation("添加商品品牌")
     @PostMapping("/create")
     @PreAuthorize("hasAuthority('pms:brand:create')")
-    public  CommonResult create(@RequestBody PmsBrandParam pmsBrand){
+    public  CommonResult create(@Validated @RequestBody PmsBrandParam pmsBrand,
+                                BindingResult bindingResult){
         Integer count = pmsBrandService.create(pmsBrand);
         if (count>0){
             return CommonResult.success(count);

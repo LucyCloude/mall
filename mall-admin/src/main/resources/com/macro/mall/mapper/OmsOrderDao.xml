@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macro.mall.dao.OmsOrderDao">
+    <!--条件查询订单-->
+    <select id="getList" resultMap="com.macro.mall.mapper.OmsOrderMapper.BaseResultMap">
+        select * from oms_order
+        <where>
+            and delete_status=0
+            <if test="order.orderSn!=null and order.orderSn!=''">
+                and order_sn=#{order.orderSn}
+            </if>
+            <if test="order.status!=null">
+                and status = #{order.status}
+            </if>
+            <if test="order.orderType!=null">
+                and order_type=#{order.orderType}
+            </if>
+            <if test="order.sourceType!=null">
+                and source_type=#{order.sourceType}
+            </if>
+            <if test="order.createTime!=null">
+                and create_time like concat(#{order.createTime},'%')
+            </if>
+            <if test="order.receiverKeyword!=null and order.receiverKeyword!=null">
+                and(
+                receiver_name like concat('%',#{order.receiverKeyword},'%')
+                or receiver_phone like concat('%',#{order.receiverKeyword},'%')
+                )
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -7,6 +7,7 @@ import com.macro.mall.query.PmsProductParam;
 import com.macro.mall.query.PmsProductQueryParam;
 import com.macro.mall.query.PmsProductResult;
 import com.macro.mall.service.PmsProductService;
+import com.macro.mall.service.impl.PmsProductServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +28,9 @@ public class PmsProductController {
     @RequestMapping("/create")
     @PreAuthorize("hasAuthority('pms:product:create')")
     public CommonResult create(@RequestBody PmsProductParam productParam){
-        Integer success = pmsProductService.create(productParam);
-        if (success>0){
-            return CommonResult.success(success);
-        }
-        return CommonResult.failed();
+        Integer count = pmsProductService.create(productParam);
+
+        return count>0 ? CommonResult.success(count) : CommonResult.failed();
     }
 
     @ApiOperation("根据商品的id查询商品修改商品")
@@ -39,6 +38,7 @@ public class PmsProductController {
     @PreAuthorize("hasAuthority('pms:product:read')")
     public  CommonResult<PmsProductResult> getUpdateInfo(@PathVariable Long id){
         PmsProductResult updateInfo = pmsProductService.getUpdateInfo(id);
+
         return CommonResult.success(updateInfo);
     }
 
@@ -46,14 +46,11 @@ public class PmsProductController {
     @PostMapping("/update/{id}")
     @PreAuthorize("hasAuthority('pms:product:update')")
     public CommonResult update(@PathVariable Long id,@RequestBody PmsProductParam pmsProductParam){
+
         Integer count = pmsProductService.update(id, pmsProductParam);
-        if (count>0){
-            return CommonResult.success(count);
-        }
-        return CommonResult.failed();
+
+        return count>0 ? CommonResult.success(count) : CommonResult.failed();
     }
-
-
 
     @ApiOperation("分页查询商品")
     @GetMapping("/list")
@@ -61,10 +58,21 @@ public class PmsProductController {
     public CommonResult<CommonPage<PmsProduct>> getList(PmsProductQueryParam pmsProductQueryParam,
                                 @RequestParam("pageNum") Integer pageNum,
                                 @RequestParam("pageSize") Integer pageSize){
-        System.out.println(pmsProductService.getClass()+"------");
         List<PmsProduct> list = pmsProductService.list(pmsProductQueryParam, pageNum, pageSize);
+
         return CommonResult.success(CommonPage.restPage(list));
     }
+
+    @ApiOperation("移除商品")
+    @RequestMapping("/update/deleteStatus")
+    @PreAuthorize("hasAuthority('pms:product:delete')")
+    public CommonResult updateStatus(@RequestParam("ids") List<Long> ids,
+                                     @RequestParam("deleteStatus") Integer deleteStatus){
+        Integer count = pmsProductService.updateStatus(ids, deleteStatus);
+
+        return count>0 ? CommonResult.success(count) : CommonResult.failed();
+    }
+
 
     @ApiOperation("批量修改商品的上下架")
     @PostMapping("/update/publishStatus")
@@ -72,10 +80,8 @@ public class PmsProductController {
     public  CommonResult updatePublishStatus(@RequestParam("ids") List<Long> ids,
                                              @RequestParam("publishStatus") Integer publishStatus){
         Integer count = pmsProductService.updatePublishStatus(ids, publishStatus);
-        if (count>0){
-            return  CommonResult.success(count);
-        }
-        return CommonResult.failed();
+
+        return count>0 ? CommonResult.success(count) : CommonResult.failed();
     }
 
     @ApiOperation("批量修改商品的推荐")
@@ -84,10 +90,8 @@ public class PmsProductController {
     public CommonResult updateRecommandStatus(@RequestParam("ids") List<Long> ids,
                                               @RequestParam("recommendStatus")Integer recommendStatus){
         Integer count = pmsProductService.updateRecommandStatus(ids, recommendStatus);
-        if (count>0){
-            return CommonResult.success(count);
-        }
-        return  CommonResult.failed();
+
+        return  count>0 ? CommonResult.success(count) : CommonResult.failed();
     }
 
 
@@ -97,9 +101,7 @@ public class PmsProductController {
     public  CommonResult updateNewStatus(@RequestParam("ids") List<Long> ids,
                                          @RequestParam("newStatus") Integer newStatus){
         Integer count = pmsProductService.updateNewStatus(ids, newStatus);
-        if (count>0){
-            return CommonResult.success(count);
-        }
-        return  CommonResult.failed();
+
+        return  count>0?CommonResult.success(count):CommonResult.failed();
     }
 }

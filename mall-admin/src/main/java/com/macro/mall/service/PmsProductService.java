@@ -35,6 +35,16 @@ public interface PmsProductService {
      */
     List<PmsProduct> list(PmsProductQueryParam pmsProductQueryParam,Integer pageNum,Integer pageSize);
 
+
+    /**
+     * 移除商品
+     * @param ids
+     * @param deleteStatus 0:未移除 1:已移除
+     * @return
+     */
+    Integer updateStatus(List<Long> ids,Integer deleteStatus);
+
+
     /**
      * 批量修改商品的上下架
      * @param ids  商品的id

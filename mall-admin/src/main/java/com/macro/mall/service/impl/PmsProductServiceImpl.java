@@ -143,6 +143,15 @@ public class PmsProductServiceImpl implements PmsProductService {
         return pmsProductMapper.selectByExample(pmsProductExample);
     }
 
+    @Override//移除商品
+    public Integer updateStatus(List<Long> ids, Integer deleteStatus) {
+        PmsProduct pmsProduct = new PmsProduct();
+        pmsProduct.setDeleteStatus(deleteStatus);
+        PmsProductExample pmsProductExample = new PmsProductExample();
+        pmsProductExample.createCriteria().andIdIn(ids);
+        return pmsProductMapper.updateByExampleSelective(pmsProduct,pmsProductExample);
+    }
+
     @Override//批量修改商品的上下架
     public Integer updatePublishStatus(List<Long> ids, Integer publishStatus) {
         PmsProduct pmsProduct=new PmsProduct();

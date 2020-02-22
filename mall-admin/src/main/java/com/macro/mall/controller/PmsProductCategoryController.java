@@ -13,6 +13,8 @@ import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,8 +29,9 @@ public class PmsProductCategoryController {
 
     @ApiOperation("添加商品分类")
     @PostMapping("/create")
-    @PreAuthorize("hasAuthority('pms:productCategory:read')")
-    public CommonResult create(@RequestBody PmsProductCategoryParam pmsProductCategoryParam){
+    @PreAuthorize("hasAuthority('pms:productCategory:create')")
+    public CommonResult create(@Validated @RequestBody PmsProductCategoryParam pmsProductCategoryParam,
+                               BindingResult bindingResult){
         Integer count = pmsProductCategoryService.create(pmsProductCategoryParam);
         if (count>0){
             return  CommonResult.success(count);
