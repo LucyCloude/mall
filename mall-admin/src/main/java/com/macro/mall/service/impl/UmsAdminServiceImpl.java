@@ -8,10 +8,10 @@ import com.macro.mall.model.UmsAdminExample;
 import com.macro.mall.model.UmsPermission;
 import com.macro.mall.service.UmsAdminService;
 import com.macro.mall.util.JwtTokenUtil;
+import com.macro.mall.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -32,6 +32,10 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+    /*@Autowired
+    private RedisUtil redisUtil;
+    @Value("${redis.redisTime}")
+    private Long redisTime;*/
     //用户登录
     @Override
     @Transactional(readOnly = true)
@@ -46,6 +50,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
             //SpringSecurity保存当前用户的信息
             UsernamePasswordAuthenticationToken authenticationToken=new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            //redisUtil.set(userDetails.getUsername(),userDetails,redisTime);//根据用户名保存用户信息
             return jwtTokenUtil.getToken(userDetails);//获取token
         }catch (Exception e){
             System.out.println(e.getMessage());

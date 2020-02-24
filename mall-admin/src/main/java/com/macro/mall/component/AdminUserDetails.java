@@ -1,11 +1,14 @@
 package com.macro.mall.component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.macro.mall.model.UmsAdmin;
 import com.macro.mall.model.UmsPermission;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,7 +16,8 @@ import java.util.stream.Collectors;
 /**
  * SpringSecurity需要的用户详情
  */
-public class AdminUserDetails implements UserDetails {
+/*@JsonIgnoreProperties(ignoreUnknown = true)*/
+public class AdminUserDetails implements UserDetails, Serializable {
     private UmsAdmin umsAdmin;//当前用户
     private List<UmsPermission> umsPermissions;//当前用户的权限
 
