@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 /**
  * SpringSecurity需要的用户详情
  */
-/*@JsonIgnoreProperties(ignoreUnknown = true)*/
 public class AdminUserDetails implements UserDetails, Serializable {
     private UmsAdmin umsAdmin;//当前用户
     private List<UmsPermission> umsPermissions;//当前用户的权限

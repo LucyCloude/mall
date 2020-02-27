@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.macro.mall.dao.OmsOrderDao">
+    <resultMap id="BaseResultMap" type="com.macro.mall.query.OmsOrderDetails"
+               extends="com.macro.mall.mapper.OmsOrderMapper.BaseResultMap" >
+        <collection property="orderItemList" columnPrefix="item_" resultMap="com.macro.mall.mapper.OmsOrderItemMapper.BaseResultMap"/>
+        <collection property="historyList" columnPrefix="history_" resultMap="com.macro.mall.mapper.OmsOrderOperateHistoryMapper.BaseResultMap"/>
+    </resultMap>
     <!--条件查询订单-->
     <select id="getList" resultMap="com.macro.mall.mapper.OmsOrderMapper.BaseResultMap">
         select * from oms_order
@@ -29,5 +34,29 @@
                 )
             </if>
         </where>
+    </select>
+    <!--查询订单详细信息-->
+    <select id="getOmsOderDetails" resultMap="BaseResultMap">
+        SELECT o.*,
+               oi.id itme_id,
+               oi.product_id item_product_id,
+               oi.product_pic item_product_pic,
+               oi.product_name item_product_name,
+               oi.product_brand item_product_brand,
+               oi.product_sn item_product_sn,
+               oi.product_price item_product_price,
+               oi.product_quantity item_product_quantity,
+               oi.product_attr item_product_attr,
+               oi.sp1 item_sp1,
+               oi.sp2 item_sp2,
+               oi.sp3 item_sp3,
+               oh.id history_id,
+               oh.operate_man history_operate_man,
+               oh.create_time history_create_time,
+               oh.order_status history_order_status,
+               oh.note history_note
+        FROM oms_order o LEFT JOIN oms_order_item oi ON o.id=oi.order_id
+                         LEFT JOIN oms_order_operate_history oh ON o.id=oh.order_id
+        WHERE o.id=#{id}
     </select>
 </mapper>

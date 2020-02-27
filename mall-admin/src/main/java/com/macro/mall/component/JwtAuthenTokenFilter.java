@@ -53,6 +53,7 @@ public class JwtAuthenTokenFilter extends OncePerRequestFilter {
                     authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authentication);
                     //redisUtil.set(userDetails.getUsername(),userDetails,redisTime);
+                    request.setAttribute("adminName",username);
                 }
             }
         }

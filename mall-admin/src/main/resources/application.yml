@@ -19,7 +19,7 @@ mybatis:
 
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
-  secret: secrt #JWT加解密使用的密钥
+  secret: secret #JWT加解密使用的密钥
   expiration: 3600 #JWT的超期限时间秒(60分钟)
   tokenHead: tokenHead  #JWT负载中拿到开头
 

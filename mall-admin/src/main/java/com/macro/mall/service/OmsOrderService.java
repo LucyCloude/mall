@@ -1,6 +1,7 @@
 package com.macro.mall.service;
 
 import com.macro.mall.model.OmsOrder;
+import com.macro.mall.query.OmsOrderDetails;
 import com.macro.mall.query.OmsOrderQueryParam;
 
 import java.util.List;
@@ -17,4 +18,20 @@ public interface OmsOrderService {
      * @return
      */
     List<OmsOrder> getList(OmsOrderQueryParam omsOrderQueryParam,Integer pageNum,Integer pageSize);
+
+    /**
+     * 查询订单详细信息
+     * @param id 订单id
+     * @return 订单详细详细
+     */
+    OmsOrderDetails getOmsOderDetails(Long id);
+
+    /**
+     * 修改订单备注
+     * @param id 订单id
+     * @param node 备注信息
+     * @param status 订单状态
+     * @return
+     */
+    Integer updateNote(Long id,String note,Integer status,String adminName);
 }
