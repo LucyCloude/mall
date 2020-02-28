@@ -3,6 +3,7 @@ package com.macro.mall.service;
 import com.macro.mall.model.OmsOrder;
 import com.macro.mall.query.OmsOrderDetails;
 import com.macro.mall.query.OmsOrderQueryParam;
+import com.macro.mall.query.OmsReceiverInfoParam;
 
 import java.util.List;
 
@@ -34,4 +35,11 @@ public interface OmsOrderService {
      * @return
      */
     Integer updateNote(Long id,String note,Integer status,String adminName);
+
+    /**
+     * 修改订单收货人信息
+     * @param omsReceiverInfoParam 收货人信息
+     * @return
+     */
+    Integer updateReceiverInfo(OmsReceiverInfoParam omsReceiverInfoParam,String adminName);
 }

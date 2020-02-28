@@ -43,7 +43,7 @@ public class JwtAuthenTokenFilter extends OncePerRequestFilter {
             String username = jwtTokenUtil.getUsername(token);//根据token得到用户名
             if (username!=null&&SecurityContextHolder.getContext().getAuthentication()==null){
                 /*UserDetails  userDetails = redisUtil.get(username); //从redis中得到用户信息和权限
-                if (userDetails==null){//判断redis中是否存在
+                if (userDetails==null){
                     System.out.println("从数据库查询用户信息-----------------------------------");
                     userDetails = userDetailsService.loadUserByUsername(username);
                 }*/

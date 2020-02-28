@@ -9,6 +9,7 @@ import com.macro.mall.model.OmsOrderExample;
 import com.macro.mall.model.OmsOrderOperateHistory;
 import com.macro.mall.query.OmsOrderDetails;
 import com.macro.mall.query.OmsOrderQueryParam;
+import com.macro.mall.query.OmsReceiverInfoParam;
 import com.macro.mall.service.OmsOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,20 +45,42 @@ public class OmsOrderServiceImpl implements OmsOrderService {
 
     @Override//订单备注信息
     public Integer updateNote(Long id, String note, Integer status,String adminName) {
-        int count=0;
+
         OmsOrder omsOrder=new OmsOrder();
         omsOrder.setId(id);
         omsOrder.setNote(note);
         omsOrder.setModifyTime(new Date());
-        omsOrderMapper.updateByPrimaryKeySelective(omsOrder);//修改订单备注信息
+        int count=omsOrderMapper.updateByPrimaryKeySelective(omsOrder);//修改订单备注信息
         OmsOrderOperateHistory omsOrderOperateHistory=new OmsOrderOperateHistory();
         omsOrderOperateHistory.setOrderId(id);
         omsOrderOperateHistory.setOperateMan(adminName);
         omsOrderOperateHistory.setCreateTime(new Date());
         omsOrderOperateHistory.setOrderStatus(status);
         omsOrderOperateHistory.setNote("修改备注信息: "+note);
-        omsOrderOperateHistoryMapper.insert(omsOrderOperateHistory);//新增操作订单记录
-        count =1;
+        count+=omsOrderOperateHistoryMapper.insert(omsOrderOperateHistory);//新增操作订单记录
+        return count;
+    }
+
+    @Override//修改订单收货人信息
+    public Integer updateReceiverInfo(OmsReceiverInfoParam omsReceiverInfoParam,String adminName) {
+        OmsOrder omsOrder=new OmsOrder();
+        omsOrder.setId(omsReceiverInfoParam.getOrderId());
+        omsOrder.setReceiverName(omsReceiverInfoParam.getReceiverName());
+        omsOrder.setReceiverPhone(omsReceiverInfoParam.getReceiverPhone());
+        omsOrder.setReceiverPostCode(omsReceiverInfoParam.getReceiverPostCode());
+        omsOrder.setReceiverDetailAddress(omsReceiverInfoParam.getReceiverDetailAddress());
+        omsOrder.setReceiverProvince(omsReceiverInfoParam.getReceiverProvince());
+        omsOrder.setReceiverCity(omsReceiverInfoParam.getReceiverCity());
+        omsOrder.setReceiverRegion(omsReceiverInfoParam.getReceiverRegion());
+        Integer count=omsOrderMapper.updateByPrimaryKeySelective(omsOrder);
+        //增加修改记录
+        OmsOrderOperateHistory omsOrderOperateHistory = new OmsOrderOperateHistory();
+        omsOrderOperateHistory.setOrderId(omsReceiverInfoParam.getOrderId());
+        omsOrderOperateHistory.setOrderStatus(omsReceiverInfoParam.getStatus());
+        omsOrderOperateHistory.setCreateTime(new Date());
+        omsOrderOperateHistory.setOperateMan(adminName);
+        omsOrderOperateHistory.setNote("修改收货人信息");
+        count+=omsOrderOperateHistoryMapper.insert(omsOrderOperateHistory);
         return count;
     }
 }

@@ -5,6 +5,7 @@ import com.macro.mall.common.CommonResult;
 import com.macro.mall.model.OmsOrder;
 import com.macro.mall.query.OmsOrderDetails;
 import com.macro.mall.query.OmsOrderQueryParam;
+import com.macro.mall.query.OmsReceiverInfoParam;
 import com.macro.mall.service.OmsOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -50,6 +51,16 @@ public class OmsOrderController {
                                    HttpServletRequest request){
         String adminName = (String) request.getAttribute("adminName");
         Integer count =omsOrderService.updateNote(id,note,status,adminName);
+        return  count>0?CommonResult.success(count):CommonResult.failed();
+    }
+
+    @ApiOperation("修改订单收货人信息")
+    @PostMapping("/update/receiverInfo")
+    @PreAuthorize("hasAuthority('oms:order:update')")
+    public CommonResult updateReceiverInfo(@RequestBody OmsReceiverInfoParam omsReceiverInfoParam,
+                                           HttpServletRequest request){
+        String adminName = (String) request.getAttribute("adminName");
+        Integer count = omsOrderService.updateReceiverInfo(omsReceiverInfoParam, adminName);
         return  count>0?CommonResult.success(count):CommonResult.failed();
     }
 }
