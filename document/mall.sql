@@ -11,7 +11,7 @@
  Target Server Version : 50528
  File Encoding         : 65001
 
- Date: 20/02/2020 16:35:05
+ Date: 28/02/2020 13:28:28
 */
 
 SET NAMES utf8mb4;
@@ -93,7 +93,7 @@ CREATE TABLE `cms_prefrence_area_product_relation`  (
   `prefrence_area_id` bigint(20) NULL DEFAULT NULL,
   `product_id` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 65 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '优选专区和产品关系表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 69 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '优选专区和产品关系表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of cms_prefrence_area_product_relation
@@ -123,8 +123,8 @@ INSERT INTO `cms_prefrence_area_product_relation` VALUES (50, 3, 47);
 INSERT INTO `cms_prefrence_area_product_relation` VALUES (54, 1, 46);
 INSERT INTO `cms_prefrence_area_product_relation` VALUES (55, 2, 46);
 INSERT INTO `cms_prefrence_area_product_relation` VALUES (60, 1, 48);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (63, 1, 49);
-INSERT INTO `cms_prefrence_area_product_relation` VALUES (64, 2, 49);
+INSERT INTO `cms_prefrence_area_product_relation` VALUES (67, 1, 49);
+INSERT INTO `cms_prefrence_area_product_relation` VALUES (68, 2, 49);
 
 -- ----------------------------
 -- Table structure for cms_subject
@@ -216,7 +216,7 @@ CREATE TABLE `cms_subject_product_relation`  (
   `subject_id` bigint(20) NULL DEFAULT NULL,
   `product_id` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 129 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '专题商品关系表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 137 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '专题商品关系表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of cms_subject_product_relation
@@ -277,7 +277,11 @@ INSERT INTO `cms_subject_product_relation` VALUES (115, 13, 47);
 INSERT INTO `cms_subject_product_relation` VALUES (119, 1, 46);
 INSERT INTO `cms_subject_product_relation` VALUES (120, 5, 46);
 INSERT INTO `cms_subject_product_relation` VALUES (125, 1, 48);
-INSERT INTO `cms_subject_product_relation` VALUES (128, 1, 49);
+INSERT INTO `cms_subject_product_relation` VALUES (132, 1, 49);
+INSERT INTO `cms_subject_product_relation` VALUES (133, 2, 49);
+INSERT INTO `cms_subject_product_relation` VALUES (134, 3, 49);
+INSERT INTO `cms_subject_product_relation` VALUES (135, 4, 49);
+INSERT INTO `cms_subject_product_relation` VALUES (136, 5, 49);
 
 -- ----------------------------
 -- Table structure for cms_topic
@@ -446,21 +450,21 @@ CREATE TABLE `oms_order`  (
 -- ----------------------------
 -- Records of oms_order
 -- ----------------------------
-INSERT INTO `oms_order` VALUES (12, 1, 2, '201809150101000001', '2018-09-15 12:24:27', 'test', 18732.00, 16377.75, 20.00, 2344.25, 0.00, 10.00, 10.00, 0, 1, 4, 0, '', '', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '江苏省', '常州市', '天宁区', '东晓街道', 'xxx', 0, 1, NULL, NULL, NULL, NULL, NULL, '2018-10-30 14:43:49');
-INSERT INTO `oms_order` VALUES (13, 1, 2, '201809150102000002', '2018-09-15 14:24:29', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 1, 0, '', '', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, 1000, '2018-10-11 14:04:19', NULL, NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (14, 1, 2, '201809130101000001', '2018-09-13 16:57:40', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 2, 0, '顺丰快递', '201707196398345', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, '2018-10-13 13:44:04', '2018-10-16 13:43:41', NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (15, 1, 2, '201809130102000002', '2018-09-13 17:03:00', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 3, 0, '顺丰快递', '201707196398346', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 1, 0, NULL, '2018-10-13 13:44:54', '2018-10-16 13:45:01', '2018-10-18 14:05:31', NULL, NULL);
-INSERT INTO `oms_order` VALUES (16, 1, 2, '201809140101000001', '2018-09-14 16:16:16', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 4, 0, NULL, NULL, 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (17, 1, 2, '201809150101000003', '2018-09-15 12:24:27', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 0, 1, 4, 0, '顺丰快递', '201707196398345', 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, '2018-10-12 14:01:28', NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (18, 1, 2, '201809150102000004', '2018-09-15 14:24:29', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 1, 0, '圆通快递', 'xx', 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, 1000, NULL, '2018-10-16 14:42:17', NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (19, 1, 2, '201809130101000003', '2018-09-13 16:57:40', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 2, 0, NULL, NULL, 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (20, 1, 2, '201809130102000004', '2018-09-13 17:03:00', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 3, 0, NULL, NULL, 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (21, 1, 2, '201809140101000002', '2018-09-14 16:16:16', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 4, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (22, 1, 2, '201809150101000005', '2018-09-15 12:24:27', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 0, 1, 4, 0, '顺丰快递', '201707196398345', 15, 0, 0, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, '2018-10-12 14:01:28', NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (23, 1, 2, '201809150102000006', '2018-09-15 14:24:29', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 1, 0, '顺丰快递', 'xxx', 15, 0, 0, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, 1000, NULL, '2018-10-16 14:41:28', NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (24, 1, 2, '201809130101000005', '2018-09-13 16:57:40', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 2, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `oms_order` VALUES (25, 1, 2, '201809130102000006', '2018-09-13 17:03:00', 'test', 18732.00, 16377.75, 10.00, 2344.25, 0.00, 10.00, 5.00, 1, 1, 4, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨22', '18033441849', '518000', '北京市', '北京城区', '东城区', '东城街道', 'xxx', 0, 0, NULL, NULL, NULL, NULL, NULL, '2018-10-30 15:08:31');
-INSERT INTO `oms_order` VALUES (26, 1, 2, '201809140101000003', '2018-09-14 16:16:16', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 0, 1, 4, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (12, 1, 2, '201809150101000001', '2018-09-15 12:24:27', 'test', 18732.00, 16377.75, 20.00, 2344.25, 0.00, 10.00, 10.00, 0, 1, 4, 0, '', '', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '亚索', '18033441849', '518000', '江苏省', '常州市', '天宁区', '东晓街道', '测试备注', 0, 0, NULL, NULL, NULL, NULL, NULL, '2020-02-27 11:33:34');
+INSERT INTO `oms_order` VALUES (13, 1, 2, '201809150102000002', '2018-09-15 14:24:29', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 1, 0, '', '', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '李四', '18033333333', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, 1000, '2018-10-11 14:04:19', NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (14, 1, 2, '201809130101000001', '2018-09-13 16:57:40', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 2, 0, '顺丰快递', '201707196398345', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '13782345485', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, '2018-10-13 13:44:04', '2018-10-16 13:43:41', NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (15, 1, 2, '201809130102000002', '2018-09-13 17:03:00', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 3, 0, '顺丰快递', '201707196398346', 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '李白', '13723231234', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 1, 0, NULL, '2018-10-13 13:44:54', '2018-10-16 13:45:01', '2018-10-18 14:05:31', NULL, NULL);
+INSERT INTO `oms_order` VALUES (16, 1, 2, '201809140101000001', '2018-09-14 16:16:16', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 4, 0, NULL, NULL, 15, 13284, 13284, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '阿萨德', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (17, 1, 2, '201809150101000003', '2018-09-15 12:24:27', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 0, 1, 4, 0, '顺丰快递', '201707196398345', 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '薇恩', '13144356576', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, '2018-10-12 14:01:28', NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (18, 1, 2, '201809150102000004', '2018-09-15 14:24:29', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 1, 0, '圆通快递', 'xx', 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '大梨', '11434235343', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, 1000, NULL, '2018-10-16 14:42:17', NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (19, 1, 2, '201809130101000003', '2018-09-13 16:57:40', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 2, 0, NULL, NULL, 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '王五', '34353424323', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (20, 1, 2, '201809130102000004', '2018-09-13 17:03:00', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 3, 0, NULL, NULL, 15, NULL, NULL, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '丽思', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (21, 1, 2, '201809140101000002', '2018-09-14 16:16:16', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 4, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '卡斯特', '13242354365', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (22, 1, 2, '201809150101000005', '2018-09-15 12:24:27', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 0, 1, 4, 0, '顺丰快递', '201707196398345', 15, 0, 0, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '齐刷刷', '17934345343', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, '2018-10-12 14:01:28', NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (23, 1, 2, '201809150102000006', '2018-09-15 14:24:29', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 1, 1, 1, 0, '顺丰快递', 'xxx', 15, 0, 0, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '卢克', '14343543444', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, 1000, NULL, '2018-10-16 14:41:28', NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (24, 1, 2, '201809130101000005', '2018-09-13 16:57:40', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 2, 1, 2, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '林肯', '14324353455', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `oms_order` VALUES (25, 1, 2, '201809130102000006', '2018-09-13 17:03:00', 'test', 18732.00, 16377.75, 10.00, 2344.25, 0.00, 10.00, 5.00, 1, 1, 4, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '卢卡斯', '13953454353', '518000', '北京市', '北京城区', '东城区', '东城街道', 'xxx', 0, 0, NULL, NULL, NULL, NULL, NULL, '2018-10-30 15:08:31');
+INSERT INTO `oms_order` VALUES (26, 1, 2, '201809140101000003', '2018-09-14 16:16:16', 'test', 18732.00, 16377.75, 0.00, 2344.25, 0.00, 10.00, 0.00, 0, 1, 4, 0, NULL, NULL, 15, 18682, 18682, '单品促销,打折优惠：满3件，打7.50折,满减优惠：满1000.00元，减120.00元,满减优惠：满1000.00元，减120.00元,无优惠', NULL, NULL, NULL, NULL, NULL, '拉克丝', '18033441849', '518000', '广东省', '深圳市', '福田区', '东晓街道', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for oms_order_item
@@ -535,7 +539,7 @@ CREATE TABLE `oms_order_operate_history`  (
   `order_status` int(1) NULL DEFAULT NULL COMMENT '订单状态：0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单',
   `note` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单操作历史记录' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单操作历史记录' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of oms_order_operate_history
@@ -558,6 +562,7 @@ INSERT INTO `oms_order_operate_history` VALUES (19, 25, '后台管理员', '2018
 INSERT INTO `oms_order_operate_history` VALUES (20, 25, '后台管理员', '2018-10-30 15:08:13', 0, '修改费用信息');
 INSERT INTO `oms_order_operate_history` VALUES (21, 25, '后台管理员', '2018-10-30 15:08:31', 0, '修改备注信息：xxx');
 INSERT INTO `oms_order_operate_history` VALUES (22, 25, '后台管理员', '2018-10-30 15:08:39', 4, '订单关闭:2222');
+INSERT INTO `oms_order_operate_history` VALUES (23, 12, 'admin', '2020-02-27 11:33:34', 4, '修改备注信息: 测试备注');
 
 -- ----------------------------
 -- Table structure for oms_order_return_apply
@@ -788,7 +793,7 @@ CREATE TABLE `pms_member_price`  (
   `member_price` decimal(10, 2) NULL DEFAULT NULL COMMENT '会员价格',
   `member_level_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 312 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品会员价格表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 320 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品会员价格表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pms_member_price
@@ -882,10 +887,10 @@ INSERT INTO `pms_member_price` VALUES (288, 46, 4, 11.00, '普通会员');
 INSERT INTO `pms_member_price` VALUES (301, 48, 1, 1.00, '黄金会员');
 INSERT INTO `pms_member_price` VALUES (302, 48, 2, 1.00, '白金会员');
 INSERT INTO `pms_member_price` VALUES (303, 48, 3, 1.00, '钻石会员');
-INSERT INTO `pms_member_price` VALUES (308, 49, 1, 111.00, '黄金会员');
-INSERT INTO `pms_member_price` VALUES (309, 49, 2, 111.00, '白金会员');
-INSERT INTO `pms_member_price` VALUES (310, 49, 3, 11.00, '钻石会员');
-INSERT INTO `pms_member_price` VALUES (311, 49, 4, 11.00, '普通会员');
+INSERT INTO `pms_member_price` VALUES (316, 49, 1, 111.00, '黄金会员');
+INSERT INTO `pms_member_price` VALUES (317, 49, 2, 111.00, '白金会员');
+INSERT INTO `pms_member_price` VALUES (318, 49, 3, 11.00, '钻石会员');
+INSERT INTO `pms_member_price` VALUES (319, 49, 4, 11.00, '普通会员');
 
 -- ----------------------------
 -- Table structure for pms_product
@@ -975,12 +980,12 @@ INSERT INTO `pms_product` VALUES (39, 6, 7, 0, 1, '111', '', '111', 1, 0, 0, 0, 
 INSERT INTO `pms_product` VALUES (40, 6, 7, 0, 1, '111', '', '11', 1, 0, 0, 0, 0, 1, 0, 1.00, NULL, 1, 1, 1, '111', '11', 1.00, 1, 0, '11', 1.00, 1, '1', '1', '1', '', '1', '1', '<p>111</p>', '', NULL, NULL, 0, 0, '小米', '外套');
 INSERT INTO `pms_product` VALUES (41, 6, 7, 0, 2, '11', '', '1', 1, 0, 0, 0, 0, 1, 0, 1.00, NULL, 1, 1, 1, '11', '1', 1.00, 1, 0, '1', 1.00, 0, '', '1', '1', '', '1', '1', '', '', NULL, NULL, 0, 0, '小米', '外套');
 INSERT INTO `pms_product` VALUES (42, 6, 7, 0, 2, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200205/dfdfdrg.jpg', '1', 0, 1, 0, 0, 0, 1, 0, 1.00, NULL, 1, 1, 1, '11', '1', 1.00, 1, 0, '1', 1.00, 0, '', '1', '1', '', '1', '1', '<p>11</p>', '', NULL, NULL, 0, 0, '小米', '外套');
-INSERT INTO `pms_product` VALUES (43, 6, 7, 0, 1, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200205/dwerfw.jpg', '1', 0, 0, 0, 0, 0, 1, 0, 1.00, NULL, 1, 1, 1, '11', '1', 1.00, 1, 0, '1', 1.00, 1, '', '1', '1', '', '1', '1', '<p>1</p>', '', NULL, NULL, 0, 0, '小米', '外套');
-INSERT INTO `pms_product` VALUES (45, 6, 48, 0, 1, '法拉利', '', '1', 0, 0, 1, 1, 0, 1, 0, 1.00, 100.00, 1, 1, 1, '11', '1', 1.00, 1, 0, '1', 1.00, 1, '1,2,3', '1', '1', '', '11', '1', '', '', '2020-02-09 19:27:16', '2020-02-09 19:27:18', 0, 4, '小米', '全新整车');
+INSERT INTO `pms_product` VALUES (43, 6, 7, 0, 1, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200205/dwerfw.jpg', '1', 1, 0, 0, 0, 0, 1, 0, 1.00, NULL, 1, 1, 1, '11', '1', 1.00, 1, 0, '1', 1.00, 1, '', '1', '1', '', '1', '1', '<p>1</p>', '', NULL, NULL, 0, 0, '小米', '外套');
+INSERT INTO `pms_product` VALUES (45, 6, 48, 0, 1, '法拉利', '', '1', 1, 0, 1, 1, 0, 1, 0, 1.00, 100.00, 1, 1, 1, '11', '1', 1.00, 1, 0, '1', 1.00, 1, '1,2,3', '1', '1', '', '11', '1', '', '', '2020-02-09 19:27:16', '2020-02-09 19:27:18', 0, 4, '小米', '全新整车');
 INSERT INTO `pms_product` VALUES (46, 6, 7, 0, 1, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/yrty.jpg', '11', 0, 1, 1, 1, 0, 1, 0, 1.00, 1.00, 0, 0, 0, '1', '1', 1.00, 1, 0, '11', 1.00, 1, '1,2,3', '1', '1', '', '1', '1', '', '', '2020-02-16 16:51:55', '2020-02-16 16:51:57', 0, 4, '小米', '外套');
-INSERT INTO `pms_product` VALUES (47, 51, 19, 0, 1, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/regregre.jpg', '1', 0, 1, 1, 1, 0, 11, 0, 2.00, 222.00, 0, 0, 0, '1', '111', 3.00, 4, 0, '1', 1.00, 1, '2,3,1', '1', '1', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/QQ图片20180907171950.png', '1', '1', '', '', '2022-03-02 00:00:00', '2020-02-16 15:59:23', 0, 4, '苹果', '手机通讯');
+INSERT INTO `pms_product` VALUES (47, 51, 19, 0, 1, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/regregre.jpg', '1', 1, 1, 1, 1, 0, 11, 0, 2.00, 222.00, 0, 0, 0, '1', '111', 3.00, 4, 0, '1', 1.00, 1, '2,3,1', '1', '1', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/QQ图片20180907171950.png', '1', '1', '', '', '2022-03-02 00:00:00', '2020-02-16 15:59:23', 0, 4, '苹果', '手机通讯');
 INSERT INTO `pms_product` VALUES (48, 6, 8, 0, 1, '11', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/eef.jpg', '11', 0, 0, 0, 0, 0, 0, 0, 1.00, NULL, 0, 0, 0, '11', '11', 0.00, 0, 0, '', 0.00, 0, '', '', '', '', '', '', '', '', NULL, NULL, 0, 4, '小米', 'T恤');
-INSERT INTO `pms_product` VALUES (49, 5, 48, 0, 3, '法拉利', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/QQ图片20180913203932.jpg', '112132', 0, 0, 1, 1, 0, 1, 0, 1.00, NULL, 1, 11, 1, '很酷的法拉利', '', 1.00, 1, 0, '1', 1.00, 0, '2,3,1', '1', '1', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg,http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg,http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/effef.jpg,http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg', '1', '1', '<p><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/dfd.jpg\" /><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpggf.jpg\" /></p>', '<p><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/gff.jpg\" /><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg\" /></p>', NULL, NULL, 0, 4, '方太', '全新整车');
+INSERT INTO `pms_product` VALUES (49, 5, 48, 0, 3, '法拉利', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/QQ图片20180913203932.jpg', '112132', 0, 1, 1, 1, 0, 1, 0, 1.00, NULL, 1, 11, 1, '很酷的法拉利', '', 1.00, 1, 0, '1', 1.00, 1, '2,3,1', '1', '1', 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg,http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg,http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/effef.jpg,http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg', '1', '1', '<p><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/dfd.jpg\" /><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpggf.jpg\" /></p>', '<p><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/gff.jpg\" /><img class=\"wscnph\" src=\"http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/psb.jpg\" /></p>', NULL, NULL, 0, 4, '方太', '全新整车');
 
 -- ----------------------------
 -- Table structure for pms_product_attribute
@@ -1066,7 +1071,7 @@ CREATE TABLE `pms_product_attribute_value`  (
   `product_attribute_id` bigint(20) NULL DEFAULT NULL,
   `value` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '手动添加规格或参数的值，参数单值，规格有多个时以逗号隔开',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 354 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '存储产品参数信息的表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 364 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '存储产品参数信息的表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pms_product_attribute_value
@@ -1198,11 +1203,11 @@ INSERT INTO `pms_product_attribute_value` VALUES (340, 48, 25, '春季');
 INSERT INTO `pms_product_attribute_value` VALUES (341, 48, 37, '儿童');
 INSERT INTO `pms_product_attribute_value` VALUES (342, 48, 38, '2020年秋');
 INSERT INTO `pms_product_attribute_value` VALUES (343, 48, 39, '短袖');
-INSERT INTO `pms_product_attribute_value` VALUES (349, 49, 43, '黑色,金色');
-INSERT INTO `pms_product_attribute_value` VALUES (350, 49, 45, '11');
-INSERT INTO `pms_product_attribute_value` VALUES (351, 49, 46, '3G');
-INSERT INTO `pms_product_attribute_value` VALUES (352, 49, 47, 'Android');
-INSERT INTO `pms_product_attribute_value` VALUES (353, 49, 48, '1111');
+INSERT INTO `pms_product_attribute_value` VALUES (359, 49, 43, '黑色,金色');
+INSERT INTO `pms_product_attribute_value` VALUES (360, 49, 45, '11');
+INSERT INTO `pms_product_attribute_value` VALUES (361, 49, 46, '3G');
+INSERT INTO `pms_product_attribute_value` VALUES (362, 49, 47, 'Android');
+INSERT INTO `pms_product_attribute_value` VALUES (363, 49, 48, '1111');
 
 -- ----------------------------
 -- Table structure for pms_product_category
@@ -1222,7 +1227,7 @@ CREATE TABLE `pms_product_category`  (
   `keywords` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '描述',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 53 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品分类' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 63 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品分类' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pms_product_category
@@ -1264,6 +1269,8 @@ INSERT INTO `pms_product_category` VALUES (49, 5, '车载电器', 1, 0, '', 1, 1
 INSERT INTO `pms_product_category` VALUES (50, 5, '维修保养', 1, 0, '', 1, 1, 0, '', '', '');
 INSERT INTO `pms_product_category` VALUES (51, 5, '汽车装饰', 1, 0, '', 1, 1, 0, '', '', '');
 INSERT INTO `pms_product_category` VALUES (52, 4, '短袖', 1, NULL, '100', 0, 0, 0, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200217/fgf.jpg', '111', '11');
+INSERT INTO `pms_product_category` VALUES (61, 0, '1', 0, NULL, 'string', 0, 1, 0, 'string', 'string', 'string');
+INSERT INTO `pms_product_category` VALUES (62, 0, ' ', 0, NULL, 'string', 1, 1, 0, 'string', 'string', 'string');
 
 -- ----------------------------
 -- Table structure for pms_product_category_attribute_relation
@@ -1297,13 +1304,13 @@ CREATE TABLE `pms_product_full_reduction`  (
   `full_price` decimal(10, 2) NULL DEFAULT NULL,
   `reduce_price` decimal(10, 2) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 120 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品满减表(只针对同商品)' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 124 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品满减表(只针对同商品)' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pms_product_full_reduction
 -- ----------------------------
-INSERT INTO `pms_product_full_reduction` VALUES (118, 49, 111.00, 11.00);
-INSERT INTO `pms_product_full_reduction` VALUES (119, 49, 0.00, 0.00);
+INSERT INTO `pms_product_full_reduction` VALUES (122, 49, 111.00, 11.00);
+INSERT INTO `pms_product_full_reduction` VALUES (123, 49, 0.00, 0.00);
 
 -- ----------------------------
 -- Table structure for pms_product_ladder
@@ -1316,14 +1323,14 @@ CREATE TABLE `pms_product_ladder`  (
   `discount` decimal(10, 2) NULL DEFAULT NULL COMMENT '折扣',
   `price` decimal(10, 2) NULL DEFAULT NULL COMMENT '折后价格',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 128 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品阶梯价格表(只针对同商品)' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 134 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '产品阶梯价格表(只针对同商品)' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pms_product_ladder
 -- ----------------------------
-INSERT INTO `pms_product_ladder` VALUES (125, 49, 1, 1.00, 0.00);
-INSERT INTO `pms_product_ladder` VALUES (126, 49, 1, 1.00, 0.00);
-INSERT INTO `pms_product_ladder` VALUES (127, 49, 0, 0.00, 0.00);
+INSERT INTO `pms_product_ladder` VALUES (131, 49, 1, 1.00, 0.00);
+INSERT INTO `pms_product_ladder` VALUES (132, 49, 1, 1.00, 0.00);
+INSERT INTO `pms_product_ladder` VALUES (133, 49, 0, 0.00, 0.00);
 
 -- ----------------------------
 -- Table structure for pms_product_operate_log
@@ -1384,7 +1391,7 @@ CREATE TABLE `pms_sku_stock`  (
   `promotion_price` decimal(10, 2) NULL DEFAULT NULL COMMENT '单品促销价格',
   `lock_stock` int(11) NULL DEFAULT 0 COMMENT '锁定库存',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 176 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'sku的库存' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 184 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'sku的库存' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pms_sku_stock
@@ -1435,10 +1442,10 @@ INSERT INTO `pms_sku_stock` VALUES (163, 47, '202002160047004', 1.00, 1, NULL, '
 INSERT INTO `pms_sku_stock` VALUES (164, 47, '202002160047005', 1.00, 1, NULL, '3XL', '黑色', NULL, NULL, NULL, NULL, 0);
 INSERT INTO `pms_sku_stock` VALUES (166, 46, '202002160046001', 11.00, 11, NULL, 'M', '黑色', NULL, NULL, NULL, NULL, 0);
 INSERT INTO `pms_sku_stock` VALUES (167, 48, '202002160048001', 1000.00, 1000, NULL, 'M', '黑色', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200216/dwerfw.jpg', NULL, NULL, 0);
-INSERT INTO `pms_sku_stock` VALUES (172, 49, '1', 11.00, 1, 1, '金色', '64G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/dfd.jpg', NULL, NULL, 0);
-INSERT INTO `pms_sku_stock` VALUES (173, 49, '1', 11.00, 1, 1, '金色', '128G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/dfd.jpg', NULL, NULL, 0);
-INSERT INTO `pms_sku_stock` VALUES (174, 49, '1', 11.00, 1, 1, '黑色', '64G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/eert.jpg', NULL, NULL, 0);
-INSERT INTO `pms_sku_stock` VALUES (175, 49, '1', 11.00, 11, 1, '黑色', '128G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/eert.jpg', NULL, NULL, 0);
+INSERT INTO `pms_sku_stock` VALUES (180, 49, '1', 11.00, 13, 113, '金色', '64G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/dfd.jpg', NULL, NULL, 0);
+INSERT INTO `pms_sku_stock` VALUES (181, 49, '11', 11.00, 1, 1, '金色', '128G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/dfd.jpg', NULL, NULL, 0);
+INSERT INTO `pms_sku_stock` VALUES (182, 49, '11', 11.00, 1, 1, '黑色', '64G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/eert.jpg', NULL, NULL, 0);
+INSERT INTO `pms_sku_stock` VALUES (183, 49, '11', 11.00, 11, 1, '黑色', '128G', NULL, 'http://server-test1.oss-cn-beijing.aliyuncs.com/images/20200219/eert.jpg', NULL, NULL, 0);
 
 -- ----------------------------
 -- Table structure for sms_coupon
@@ -1844,6 +1851,7 @@ CREATE TABLE `ums_admin`  (
 -- ----------------------------
 INSERT INTO `ums_admin` VALUES (1, 'test', '$2a$10$NZ5o7r2E.ayT2ZoxgjlI.eJ6OEYqjH7INR/F.mXDbjZJi9HF0YCVG', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/timg.jpg', NULL, '测试账号', NULL, '2018-09-29 13:55:30', '2018-09-29 13:55:39', 1);
 INSERT INTO `ums_admin` VALUES (3, 'admin', '$2a$10$.E1FokumK5GIXWgKlg.Hc.i/0/2.qdAwYFL1zc5QHdyzpXOr38RZO', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20190129/170157_yIl3_1767531.jpg', 'admin@163.com', '系统管理员', '系统管理员', '2018-10-08 13:32:47', '2019-03-20 15:38:50', 1);
+INSERT INTO `ums_admin` VALUES (4, 'Lusy', '$2a$10$eomY0zFLcXKTg5jyyN5/xeQdcZx/mVAK3t2Tx2tl31UfEDn8Gw.Vq', 'string', 'string', 'string', 'string', '2020-02-21 11:35:28', NULL, 1);
 
 -- ----------------------------
 -- Table structure for ums_admin_login_log
@@ -1857,7 +1865,7 @@ CREATE TABLE `ums_admin_login_log`  (
   `address` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `user_agent` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '浏览器登录类型',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 72 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户登录日志表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 75 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户登录日志表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ums_admin_login_log
@@ -1929,6 +1937,9 @@ INSERT INTO `ums_admin_login_log` VALUES (68, 3, '2020-02-19 15:29:40', '0:0:0:0
 INSERT INTO `ums_admin_login_log` VALUES (69, 3, '2020-02-19 15:48:29', '0:0:0:0:0:0:0:1', NULL, NULL);
 INSERT INTO `ums_admin_login_log` VALUES (70, 3, '2020-02-20 10:57:44', '0:0:0:0:0:0:0:1', NULL, NULL);
 INSERT INTO `ums_admin_login_log` VALUES (71, 3, '2020-02-20 11:27:48', '0:0:0:0:0:0:0:1', NULL, NULL);
+INSERT INTO `ums_admin_login_log` VALUES (72, 4, '2020-02-21 11:36:00', '0:0:0:0:0:0:0:1', NULL, NULL);
+INSERT INTO `ums_admin_login_log` VALUES (73, 3, '2020-02-22 17:22:14', '0:0:0:0:0:0:0:1', NULL, NULL);
+INSERT INTO `ums_admin_login_log` VALUES (74, 3, '2020-02-23 18:21:36', '0:0:0:0:0:0:0:1', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for ums_admin_permission_relation
@@ -1951,14 +1962,12 @@ CREATE TABLE `ums_admin_role_relation`  (
   `admin_id` bigint(20) NULL DEFAULT NULL,
   `role_id` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户和角色关系表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户和角色关系表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ums_admin_role_relation
 -- ----------------------------
-INSERT INTO `ums_admin_role_relation` VALUES (13, 3, 1);
-INSERT INTO `ums_admin_role_relation` VALUES (15, 3, 2);
-INSERT INTO `ums_admin_role_relation` VALUES (16, 3, 4);
+INSERT INTO `ums_admin_role_relation` VALUES (22, 3, 10);
 
 -- ----------------------------
 -- Table structure for ums_growth_change_history
@@ -2227,7 +2236,7 @@ CREATE TABLE `ums_permission`  (
   `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
   `sort` int(11) NULL DEFAULT NULL COMMENT '排序',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户权限表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户权限表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ums_permission
@@ -2250,6 +2259,9 @@ INSERT INTO `ums_permission` VALUES (15, 6, '添加品牌', 'pms:brand:create', 
 INSERT INTO `ums_permission` VALUES (16, 6, '修改品牌', 'pms:brand:update', NULL, 2, '/pms/brand/update', 1, '2018-09-29 16:50:55', 0);
 INSERT INTO `ums_permission` VALUES (17, 6, '删除品牌', 'pms:brand:delete', NULL, 2, '/pms/brand/delete', 1, '2018-09-29 16:50:59', 0);
 INSERT INTO `ums_permission` VALUES (18, 0, '首页', NULL, NULL, 0, NULL, 1, '2018-09-29 16:51:57', 0);
+INSERT INTO `ums_permission` VALUES (19, 1, '订单列表', 'oms:order:read', NULL, 1, 'oms/order/index', 1, '2020-02-20 16:24:43', 0);
+INSERT INTO `ums_permission` VALUES (20, 19, '修改订单', 'oms:order:update', NULL, 1, 'oms/order/update', 1, '2020-02-20 16:24:43', 0);
+INSERT INTO `ums_permission` VALUES (21, 19, '删除订单', 'oms:order:delete', NULL, 1, 'oms/order/delete', 1, '2020-02-20 16:24:43', 0);
 
 -- ----------------------------
 -- Table structure for ums_resource_category
@@ -2286,15 +2298,17 @@ CREATE TABLE `ums_role`  (
   `status` int(1) NULL DEFAULT 1 COMMENT '启用状态：0->禁用；1->启用',
   `sort` int(11) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户角色表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户角色表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ums_role
 -- ----------------------------
 INSERT INTO `ums_role` VALUES (1, '商品管理员', '只能查看及操作商品', 0, '2020-02-03 16:50:37', 1, 0);
-INSERT INTO `ums_role` VALUES (2, '订单管理员', '只能查看及操作订单', 0, '2018-09-30 15:53:45', 1, 0);
-INSERT INTO `ums_role` VALUES (5, '超级管理员', '拥有所有查看和操作功能', 0, '2020-02-02 15:11:05', 1, 0);
-INSERT INTO `ums_role` VALUES (6, '测试角色', '仅供测试', 0, '2020-02-12 10:14:09', 1, 0);
+INSERT INTO `ums_role` VALUES (2, '订单管理员', '只能查看及操作订单', 0, '2020-02-03 15:53:45', 1, 0);
+INSERT INTO `ums_role` VALUES (7, '分类管理员', '只能查看及操作分类', 0, '2020-02-21 10:14:09', 1, 0);
+INSERT INTO `ums_role` VALUES (8, '品牌管理员', '只能查看及操作品牌', 0, '2020-02-21 10:14:09', 1, 0);
+INSERT INTO `ums_role` VALUES (9, '类型管理员', '只能查看及操作类型', 0, '2020-02-21 10:14:09', 1, 0);
+INSERT INTO `ums_role` VALUES (10, '超级管理员', '能操作所有模块', 0, '2020-02-21 10:14:09', 1, 0);
 
 -- ----------------------------
 -- Table structure for ums_role_permission_relation
@@ -2305,7 +2319,7 @@ CREATE TABLE `ums_role_permission_relation`  (
   `role_id` bigint(20) NULL DEFAULT NULL,
   `permission_id` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户角色和权限关系表' ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 64 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户角色和权限关系表' ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ums_role_permission_relation
@@ -2315,17 +2329,41 @@ INSERT INTO `ums_role_permission_relation` VALUES (2, 1, 2);
 INSERT INTO `ums_role_permission_relation` VALUES (3, 1, 3);
 INSERT INTO `ums_role_permission_relation` VALUES (4, 1, 7);
 INSERT INTO `ums_role_permission_relation` VALUES (5, 1, 8);
-INSERT INTO `ums_role_permission_relation` VALUES (6, 2, 4);
-INSERT INTO `ums_role_permission_relation` VALUES (7, 2, 9);
-INSERT INTO `ums_role_permission_relation` VALUES (8, 2, 10);
-INSERT INTO `ums_role_permission_relation` VALUES (9, 2, 11);
-INSERT INTO `ums_role_permission_relation` VALUES (10, 3, 5);
-INSERT INTO `ums_role_permission_relation` VALUES (11, 3, 12);
-INSERT INTO `ums_role_permission_relation` VALUES (12, 3, 13);
-INSERT INTO `ums_role_permission_relation` VALUES (13, 3, 14);
-INSERT INTO `ums_role_permission_relation` VALUES (14, 4, 6);
-INSERT INTO `ums_role_permission_relation` VALUES (15, 4, 15);
-INSERT INTO `ums_role_permission_relation` VALUES (16, 4, 16);
-INSERT INTO `ums_role_permission_relation` VALUES (17, 4, 17);
+INSERT INTO `ums_role_permission_relation` VALUES (18, 7, 4);
+INSERT INTO `ums_role_permission_relation` VALUES (19, 7, 9);
+INSERT INTO `ums_role_permission_relation` VALUES (20, 7, 10);
+INSERT INTO `ums_role_permission_relation` VALUES (21, 7, 11);
+INSERT INTO `ums_role_permission_relation` VALUES (26, 8, 6);
+INSERT INTO `ums_role_permission_relation` VALUES (27, 8, 15);
+INSERT INTO `ums_role_permission_relation` VALUES (28, 8, 16);
+INSERT INTO `ums_role_permission_relation` VALUES (29, 8, 17);
+INSERT INTO `ums_role_permission_relation` VALUES (30, 9, 5);
+INSERT INTO `ums_role_permission_relation` VALUES (31, 9, 12);
+INSERT INTO `ums_role_permission_relation` VALUES (32, 9, 13);
+INSERT INTO `ums_role_permission_relation` VALUES (33, 9, 14);
+INSERT INTO `ums_role_permission_relation` VALUES (34, 10, 1);
+INSERT INTO `ums_role_permission_relation` VALUES (35, 10, 2);
+INSERT INTO `ums_role_permission_relation` VALUES (36, 10, 3);
+INSERT INTO `ums_role_permission_relation` VALUES (37, 10, 4);
+INSERT INTO `ums_role_permission_relation` VALUES (38, 10, 5);
+INSERT INTO `ums_role_permission_relation` VALUES (39, 10, 6);
+INSERT INTO `ums_role_permission_relation` VALUES (40, 10, 7);
+INSERT INTO `ums_role_permission_relation` VALUES (41, 10, 8);
+INSERT INTO `ums_role_permission_relation` VALUES (42, 10, 9);
+INSERT INTO `ums_role_permission_relation` VALUES (43, 10, 10);
+INSERT INTO `ums_role_permission_relation` VALUES (44, 10, 11);
+INSERT INTO `ums_role_permission_relation` VALUES (45, 10, 12);
+INSERT INTO `ums_role_permission_relation` VALUES (46, 10, 13);
+INSERT INTO `ums_role_permission_relation` VALUES (47, 10, 14);
+INSERT INTO `ums_role_permission_relation` VALUES (48, 10, 15);
+INSERT INTO `ums_role_permission_relation` VALUES (49, 10, 16);
+INSERT INTO `ums_role_permission_relation` VALUES (50, 10, 17);
+INSERT INTO `ums_role_permission_relation` VALUES (51, 10, 18);
+INSERT INTO `ums_role_permission_relation` VALUES (58, 2, 19);
+INSERT INTO `ums_role_permission_relation` VALUES (59, 2, 20);
+INSERT INTO `ums_role_permission_relation` VALUES (60, 2, 21);
+INSERT INTO `ums_role_permission_relation` VALUES (61, 10, 19);
+INSERT INTO `ums_role_permission_relation` VALUES (62, 10, 20);
+INSERT INTO `ums_role_permission_relation` VALUES (63, 10, 21);
 
 SET FOREIGN_KEY_CHECKS = 1;

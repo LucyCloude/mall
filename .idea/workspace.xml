@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dade69e-928e-4e91-93a5-5f3c20c4951a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/mall-admin/target/" />
@@ -102,8 +101,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="258">
-                <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <first_editor relative-caret-position="360">
+                <caret line="54" selection-start-line="54" selection-end-line="54" />
               </first_editor>
               <second_editor />
             </state>
@@ -239,7 +238,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/document" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -464,7 +463,8 @@
     <MESSAGE value="新增订单分页查询" />
     <MESSAGE value="增加redis缓存当前登录存储用户信息" />
     <MESSAGE value="增加订单备注功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加订单备注功能" />
+    <MESSAGE value="修改指南" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改指南" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/query/OssCallbackResult.java">
@@ -838,8 +838,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="258">
-            <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <first_editor relative-caret-position="360">
+            <caret line="54" selection-start-line="54" selection-end-line="54" />
           </first_editor>
           <second_editor />
         </state>
