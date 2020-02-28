@@ -48,17 +48,10 @@
 | Js-cookie  | cookie管理工具        | [https://github.com/js-cookie/js-cookie](https://github.com/js-cookie/js-cookie) |
 | nprogress  | 进度条控件            | [https://github.com/rstacruz/nprogress](https://github.com/rstacruz/nprogress) |
 
-#### 架构图
+### 项目演示
 
-##### 系统架构图
+![https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif](https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif)
 
-![系统架构图](document/resource/mall_micro_service_arch.jpg)
-
-##### 业务架构图
-
-![系统架构图](document/resource/mall_business_arch.png)
-
-#### 模块介绍
 
 ##### 后台管理系统 `mall-admin`
 
@@ -68,13 +61,6 @@
 - 内容管理：[功能结构图-内容.jpg](document/resource/mind_content.jpg)
 - 用户管理：[功能结构图-用户.jpg](document/resource/mind_member.jpg)
 
-##### 前台商城系统 `mall-portal`
-
-[功能结构图-前台.jpg](document/resource/mind_portal.jpg)
-
-#### 开发进度
-
-![项目开发进度图](document/resource/mall_dev_flow.png)
 
 ## 环境搭建
             |                      |
@@ -101,5 +87,3 @@
 - [Kubernetes权威指南](https://book.douban.com/subject/26902153/)
 - [Pro Git](https://git-scm.com/book/zh/v2)
 
-
-Copyright (c) 2019-2020 macrozheng
