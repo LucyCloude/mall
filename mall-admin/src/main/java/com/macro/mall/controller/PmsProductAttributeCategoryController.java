@@ -71,7 +71,6 @@ public class PmsProductAttributeCategoryController {
     @GetMapping("/list/withAttr")
     @PreAuthorize("hasAuthority('pms:productAttribute:read')")
     public CommonResult<List<PmsProductAttributeCategoryItem>> getAttriItem(){
-
         return CommonResult.success(pmsProductAttributeCategoryService.getAttriItem());
     }
 }

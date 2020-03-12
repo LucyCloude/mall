@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api(tags ="umsMemberLevelController",description = "业务等级管理")
+@Api(tags ="umsMemberLevelController",description = "会员等级管理")
 @RestController
 @RequestMapping("/memberLevel")
 public class UmsMemberLevelController {

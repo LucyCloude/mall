@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macro.mall.dao.OmsOrderReturnApplyDao">
+    <resultMap id="BaseResultMap" type="com.macro.mall.query.OmsOrderReturnApplyResult"
+               extends="com.macro.mall.mapper.OmsOrderReturnApplyMapper.BaseResultMap">
+        <collection property="companyAddress" ofType="com.macro.mall.model.OmsCompanyAddress"
+                    resultMap="com.macro.mall.mapper.OmsCompanyAddressMapper.BaseResultMap" columnPrefix="ca_"/>
+    </resultMap>
+    
+    
+    <select id="getList" resultMap="com.macro.mall.mapper.OmsOrderReturnApplyMapper.BaseResultMap">
+       select * from oms_order_return_apply
+       <where>
+           <if test="apply.id!=null and apply.id!=''">
+                and id=#{apply.id}
+           </if>
+           <if test="apply.status!=null">
+                and status=#{apply.status}
+           </if>
+           <if test="apply.createTime!=null and apply.createTime!=''">
+               and create_time like concat (#{apply.createTime},'%')
+           </if>
+           <if test="apply.handleTime!=null and apply.handleTime!=''">
+               and handle_time like concat(#{apply.handleTime},'%')
+           </if>
+           <if test="apply.handleMan!=null and apply.handleMan!=''">
+               and handle_man=#{apply.handleMan}
+           </if>
+       </where>
+   </select>
+
+   <select id="getReturnApply" resultMap="BaseResultMap">
+       select ra.*,
+              ca.id ca_id,
+              ca.address_name ca_address_name,
+              ca.`name` ca_name,
+              ca.phone ca_phone,
+              ca.province ca_province,
+              ca.city ca_city,
+              ca.region ca_region,
+              ca.detail_address ca_detail_address
+              from oms_order_return_apply ra
+               left join oms_company_address ca
+                on ra.company_address_id=ca.id
+                 where ra.id=#{id}
+   </select>
+</mapper>

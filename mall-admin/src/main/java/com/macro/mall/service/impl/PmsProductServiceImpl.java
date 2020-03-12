@@ -120,6 +120,7 @@ public class PmsProductServiceImpl implements PmsProductService {
     public List<PmsProduct> list(PmsProductQueryParam pmsProductQueryParam, Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum,pageSize);
         PmsProductExample pmsProductExample=new PmsProductExample();
+        pmsProductExample.setOrderByClause("sort desc");
         PmsProductExample.Criteria criteria = pmsProductExample.createCriteria();
         criteria.andDeleteStatusEqualTo(0);//DeleteStatus 0:未删除  1:已删除
         if (!StringUtils.isEmpty(pmsProductQueryParam.getKeyword())){//商品名称

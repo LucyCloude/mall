@@ -3,6 +3,7 @@ package com.macro.mall.controller;
 import com.macro.mall.common.CommonPage;
 import com.macro.mall.common.CommonResult;
 import com.macro.mall.model.OmsOrder;
+import com.macro.mall.query.OmsOrderDeliveryParam;
 import com.macro.mall.query.OmsOrderDetails;
 import com.macro.mall.query.OmsOrderQueryParam;
 import com.macro.mall.query.OmsReceiverInfoParam;
@@ -42,6 +43,7 @@ public class OmsOrderController {
         OmsOrderDetails omsOderDetails = omsOrderService.getOmsOderDetails(id);
         return CommonResult.success(omsOderDetails);
     }
+
     @ApiOperation("备注订单")
     @PostMapping("/update/note")
     @PreAuthorize("hasAuthority('oms:order:update')")
@@ -62,5 +64,34 @@ public class OmsOrderController {
         String adminName = (String) request.getAttribute("adminName");
         Integer count = omsOrderService.updateReceiverInfo(omsReceiverInfoParam, adminName);
         return  count>0?CommonResult.success(count):CommonResult.failed();
+    }
+
+    @ApiOperation("关闭订单")
+    @PostMapping("/update/close")
+    @PreAuthorize("hasAuthority('oms:order:update')")
+    public CommonResult updateColse(@RequestParam("ids") List<Long> ids,
+                                    @RequestParam("note") String note,
+                                    HttpServletRequest request){
+        String adminName = (String) request.getAttribute("adminName");
+        Integer count = omsOrderService.updateClose(ids, note, adminName);
+        return  count>0?CommonResult.success(count):CommonResult.failed();
+    }
+
+    @ApiOperation("删除订单")
+    @PostMapping("/delete")
+    @PreAuthorize("hasAuthority('oms:order:delete')")
+    public CommonResult delete(@RequestParam("ids") List<Long> ids){
+        Integer count = omsOrderService.delete(ids);
+        return count>0?CommonResult.success(count):CommonResult.failed();
+    }
+
+    @ApiOperation("批量订单发货")
+    @PostMapping("/update/delivery")
+    @PreAuthorize("hasAuthority('oms:order:update')")
+    public CommonResult delivery(@RequestBody List<OmsOrderDeliveryParam> orderDeliveryParamList,
+                                 HttpServletRequest request){
+        String adminName =(String) request.getAttribute("adminName");
+        Integer count = omsOrderService.delivery(orderDeliveryParamList, adminName);
+        return count>0?CommonResult.success(count):CommonResult.failed();
     }
 }

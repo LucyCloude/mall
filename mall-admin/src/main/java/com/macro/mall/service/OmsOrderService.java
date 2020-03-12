@@ -1,6 +1,7 @@
 package com.macro.mall.service;
 
 import com.macro.mall.model.OmsOrder;
+import com.macro.mall.query.OmsOrderDeliveryParam;
 import com.macro.mall.query.OmsOrderDetails;
 import com.macro.mall.query.OmsOrderQueryParam;
 import com.macro.mall.query.OmsReceiverInfoParam;
@@ -42,4 +43,27 @@ public interface OmsOrderService {
      * @return
      */
     Integer updateReceiverInfo(OmsReceiverInfoParam omsReceiverInfoParam,String adminName);
+
+    /**
+     * 批量关闭订单
+     * @param ids
+     * @param note
+     * @return
+     */
+    Integer updateClose(List<Long> ids,String note,String adminName);
+
+    /**
+     * 批量删除订单
+     * @param dis
+     * @return
+     */
+    Integer delete(List<Long> dis);
+
+
+    /**
+     * 批量订单发货
+     * @param omsOrderDeliveryParams
+     * @return
+     */
+    Integer delivery(List<OmsOrderDeliveryParam> omsOrderDeliveryParams,String adminName);
 }
