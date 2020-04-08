@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * JwtToken生成的工具类
- * JWT token的格式：header.payload.signature
+ * JWT token的格式：Header 头部 Payload 负载 Signature 签名
  * header的格式（算法、token的类型）：
  * {"alg": "HS512","typ": "JWT"}
  * payload的格式（用户名、创建时间、生成时间）：

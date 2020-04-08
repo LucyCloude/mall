@@ -19,7 +19,7 @@ public class UmsMemberLevelServiceImpl implements UmsMemberLevelService {
     @Autowired
     private UmsMemberLevelMapper umsMemberLevelMapper;
     @Override
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true)//查询所有会员等级
     public List<UmsMemberLevel> getList(Integer defaultStatus) {
         return umsMemberLevelMapper.selectByExample(new UmsMemberLevelExample());
     }
