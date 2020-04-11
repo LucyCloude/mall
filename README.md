@@ -48,11 +48,9 @@
 | Js-cookie  | cookie管理工具        | [https://github.com/js-cookie/js-cookie](https://github.com/js-cookie/js-cookie) |
 | nprogress  | 进度条控件            | [https://github.com/rstacruz/nprogress](https://github.com/rstacruz/nprogress) |
 
-
-
-
 ## 环境搭建
-            |                      |
+后台管理系统功能演示
+    http://p3.pstatp.com/large/pgc-image/0aaeb883efd449f5a08ec24e0b974f25
 ### 开发环境
 
 | 工具          | 版本号 | 下载                                                         |

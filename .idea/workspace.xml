@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dade69e-928e-4e91-93a5-5f3c20c4951a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderReturnReasonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/OmsOrderReturnReasonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/OmsOrderReturnReasonServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBranController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/PmsdBrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/UmsMemberLevelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/UmsMemberLevelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/UmsMemberLevelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/UmsMemberLevelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/util/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/util/JwtTokenUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/mall-admin/target/" />
     <ignored path="$PROJECT_DIR$/mall-model/target/" />
@@ -38,56 +30,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/impl/OmsOrderReturnReasonServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="58" column="27" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderReturnReasonController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-240">
-                <caret line="50" selection-start-line="50" selection-end-line="50" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/OmsOrderReturnReasonService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -218,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,7 +173,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -386,10 +329,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23600605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2397882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -400,7 +342,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.19148937" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.28968903" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,7 +417,8 @@
     <MESSAGE value="重新备份sql数据表结构及数据信息" />
     <MESSAGE value="增加修改收货人信息功能" />
     <MESSAGE value="增加订单的删除，修改收货人的信息以及修改订单的备注等操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加订单的删除，修改收货人的信息以及修改订单的备注等操作" />
+    <MESSAGE value="完成退货原因的设置模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成退货原因的设置模块" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/service/OmsOrderSettingService.java">
@@ -884,16 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderReturnReasonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -901,6 +834,16 @@
             <caret line="50" selection-start-line="50" selection-end-line="50" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-admin/src/main/java/com/macro/mall/controller/OmsOrderReturnReasonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
