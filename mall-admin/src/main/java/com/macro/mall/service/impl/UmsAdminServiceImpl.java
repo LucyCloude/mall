@@ -85,6 +85,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     }
 
     @Override//获取用户的所有权限
+    @Transactional(readOnly = true)
     public List<UmsPermission> getPermissionList(Long adminId) {
         return umsRolePermissionRelationDao.getUserPermissionList(adminId);
     }
