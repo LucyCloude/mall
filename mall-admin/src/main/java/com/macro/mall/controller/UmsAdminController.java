@@ -46,6 +46,7 @@ public class UmsAdminController {
     @ApiOperation(value = "获取当前登录用户信息")
     @PostMapping(value = "/info")
     public CommonResult getAdminInfo(Principal principal) {
+
         //根据用户名查询出用户信息
         UmsAdmin umsAdmin = umsAdminService.getAdminByUsername(principal.getName());
         Map<String, Object> data = new HashMap<>();

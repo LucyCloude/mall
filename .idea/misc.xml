@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/mall-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/mall-model" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
