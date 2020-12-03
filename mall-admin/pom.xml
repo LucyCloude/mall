@@ -33,7 +33,6 @@
         <jjwt.version>0.9.0</jjwt.version>
         <aliyun-oss.version>2.5.0</aliyun-oss.version>
         <logstash-logback.version>4.8</logstash-logback.version>
-        <docker.host>http://47.115.9.168:2375</docker.host>
     </properties>
 
     <dependencies>
